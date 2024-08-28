@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+a {
+  transition: 0.3s all ease-in-out;
+  color: white;
+}
+:root {
+  --coloran: #007bff;
+  --coloran: #007BFF;
+  --primaryGradient: linear-gradient(93.12deg, #514955 0.52%, #679ad4 100%);
+  --secondaryGradient: linear-gradient(268.91deg, #0056B3 -2.14%, #514955 99.69%);
+  --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+  --primary: #514955;
+}
+
+.container {
+  padding: 0 6rem;
+}
+
+/* handburger logo */
+.hand {
+  position: relative;
+  width: 40px;
+  height: 26.31px;
+  top: 13.15px;
+  left: 4.38px;
+  display: none;
+}
+.hand span.menu {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  width: 35px;
+  height: 3.5px;
+  transition: all 0.5s ease-in-out;
+}
+.hand span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.hand span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.hand:hover span:nth-child(1) {
+  transform: rotateZ(45deg);
+}
+.hand:hover span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.hand:hover span:nth-child(2) {
+  transform: rotate(720deg);
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  background: #f5f5f5;
+  box-shadow: 0px 4px 4px 0px #b6b6b625;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 97px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header nav.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+header nav.navigation ul a {
+  display: block;
+  color: var(--coloran);
+  text-decoration: none;
+  padding: 10px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 7px;
+  text-align: center;
+}
+
+/* hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 80px;
+}
+
+
+.left_infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+  min-width: 600px;
+}
+.left_infor h1 {
+  font-family: Raleway;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60.26px;
+  text-align: left;
+  color: black;
+}
+.left_infor h1 span {
+  color: var(--coloran);
+}
+.left_infor h3 {
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 19.2px;
+  text-align: left;
+  color: #007bff;
+}
+
+.btn {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 60px;
+  background: #0056b3;
+  padding: 10px 20px;
+  gap: 11px;
+}
+.cta:hover {
+  background: #0056b390;
+  transition: 0.3s all ease-in-out;
+}
+a.cta {
+  text-decoration: none;
+  color: white;
+  font-family: Raleway;
+  font-size: 18.6px;
+  font-weight: 700;
+  line-height: 21.84px;
+  text-align: center;
+}
+
+a.secbtn {
+  color: #0056b3;
+}
+
+.secbtn {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #0056b3;
+  background-color: transparent;
+}
+.secbtn:hover {
+  background: transparent;
+  border: 2px solid #ffffff;
+  transition: 0.3s all ease-in-out;
+}
+.navigation ul li a:hover {
+  color: black;
+}
+
+.guest {
+  display: flex;
+  margin-top: 2rem;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  color: #007bff;
+  width: 400px;
+  height: 25px;
+  align-items: center;
+}
+a.guest {
+  text-decoration: none;
+}
+
+.guest span {
+  margin-left: 1rem;
+  width: 2.4rem;
+}
+.right {
+  margin-top: 3rem;
+}
+
+.wcontainer{
+  padding:  76px 80px 60px  80px;
+  justify-content: space-between;
+  gap: 104px;
+
+}
+.wtitle{
+  margin-bottom: 16px;
+  width: 100%;
+}
+.wtitle h1{
+  font-family: 'Raleway';
+  font-size: 36px;
+  color: #007BFF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wlist1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 222px;
+  padding: 20px 0 20px 0;
+}
+.wlist1 h2{
+  font-family: 'Raleway';
+  font-size: 30px;
+  color: #007BFF;
+  margin-bottom: 12px;
+}
+
+.wlist1 p{
+  color: #343A40;
+  font-family: 'Lato';
+  font-size: 14;
+  font-weight: 500;
+}
+
+.wlist2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 222px;
+  padding: 20px 0 20px 0;
+}
+
+.wlist2 h2{
+  font-family: 'Raleway';
+  font-size: 30px;
+  color: #007BFF;
+  margin-bottom: 12px;
+}
+
+.wlist2 p{
+  color: #343A40;
+  font-family: 'Lato';
+  font-size: 14;
+  font-weight: 500;
+}
+
+
+
+.testimonials {
+  padding: 76px 80px 60px  80px;
+}
+.testimonialhead {
+  font-family: 'Raleway';
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ .testimonialhead h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #343A40;
+ 
+}
+.tbtn button {
+  padding: 12px;
+  width: 137px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  font-family: "raleway";
+  border: 0px;
+}
+.tcards {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 60px;
+  align-items: center;
+}
+
+.tcards .card {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 8px 12px;
+  gap: 24px;
+  border-left: solid 8px #0056b3;
+  background-color: white;
+  box-shadow: #b6b6b625;
+  align-self: flex-start;
+  border-radius: 8px;
+}
+
+.tcards .card2 {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 8px 12px;
+  gap: 24px;
+  border-left: solid 8px #0056b3;
+  background-color: white;
+  box-shadow: #b6b6b620;
+  align-self: flex-end;
+  border-radius: 8px;
+}
+
+.card .card2 img {
+  object-fit: cover;
+}
+
+.card2 p span {
+  font-weight: bold;
+  color: #0056b3;
+  font-family: 'Raleway';
+
+}
+
+.card2 p {
+  font-size: 14px;
+  font-family: 'Lato';
+  color: #343A40;
+}
+
+.card p {
+  font-size: 14px;
+  font-family: 'Lato';
+  color: #343A40;
+}
+.card p span {
+  font-weight: bold;
+  color: #0056b3;
+  
+}
+.acontainer{
+
+    padding: 46px 80px  46px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.c1{
+    display: flex;
+    justify-content: space-between;
+   gap: 120px;
+    align-items: center ;
+}
+
+.ctext{
+    justify-content: space-between;
+    gap: 30px;
+   
+}
+
+.c1 h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'Raleway';
+    padding-bottom: 12px;
+}
+
+.c1 h3{
+    font-size: 16px;
+    font-family: 'Lato';
+    color: #343A40;
+    font-weight: 400;
+}
+
+.c1 img{
+   width: 240px;
+   height: 240px;  
+}
+
+.c2 h1{
+  padding-bottom: 16px;
+  color: #007bff;
+  font-family: 'Raleway';
+
+}
+
+.c2text{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.c2text img{
+  width: fit-content;
+  height: fit-content;
+}
+
+
+.c2text .c2content{
+  display: flex;
+  justify-content: space-between;
+  gap: 44px;
+ 
+}
+
+.c2content1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.c2content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+
+
+.c2content .c2content1{
+    justify-content: space-between;
+    gap: 28px;
+}
+
+
+
+
+.con .p1{
+   color: #0056b3;
+   font-size: 12px;
+   font-weight: 400;
+   font-family: 'Raleway';
+}
+
+.headcon{
+display: flex;
+gap: 6px;
+align-content: center;
+}
+
+.headcon p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Lato';
+    color: #343A40;
+
+}
+.headcon img{
+    width: 24px;
+    height: 24px;
+}
+
+.dcontainer{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 46px   46px;
+  background-color: #343A40;
+}
+.footerlinks{
+  display: flex;
+}
+.footerlinks h5{
+  color: #007bff;
+  font-size: 16px;
+  padding-bottom: 12px;
+  font-family: 'Raleway';
+}
+.footerlinks li{
+  list-style: none;
+  gap: 12px;
+  padding-bottom: 12px;
+  justify-content: space-between;
+
+
+}
+.footerlinks li a{
+  color: #f5f5f5;
+  text-decoration: none;
+  font-family: 'Lato';
+  font-size: 14px;
+
+}
+.footerlinks2{ 
+  display: flex;
+
+}
+.footerlinks2 h5{
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 12px;
+  font-family: 'Raleway';
+}
+.footerlinks2 li{
+  list-style: none;
+  padding-bottom: 12px;
+}
+
+
+.footerlinks2 li img{
+  width: 20px;
+  height: 20px;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+}
+.message form button{
+  width: 50%;
+  height: 30px;
+  background-color: #0056b3;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  color: #f5f5f5;
+
+}
+
+.message h5{
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Raleway';
+  padding-bottom: 12px;
+
+}
+.message form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.message input{
+  border: none;
+  border-bottom: 1px solid #007bff;
+  background-color: #343A40;
+  color: #bfbfbf50;
+  padding: 8px;
+}
+
+.message textarea{
+  border: none;
+  border-bottom: 1px solid #007bff;
+  background-color: #343A40;
+  padding: 8px;
+}
+.buttom{
+  background-color: #343A40;
+  border-top: 1px solid #f5f5f5;
+  padding: 12px 0 12px 0;
+
+}
+.buttom p{
+  font-size: 8px;
+  color: #f5f5f5;
+  width: 100%;
+  text-align: center;
+  font-family: 'Lato';
+  padding: 2px;
+}
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #e0eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+
+.chatbox__support {
+    background: #f9f9f9;
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+}
+
+.chatbox__heading--header {
+    font-family: Raleway;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .8rem;
+    font-family: Raleway;
+    color: white;
+}
+
+/* Messages */
+.chatbox__messages {
+    padding: 0 20px;
+}
+
+.messages__item {
+    margin-top: 10px;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--secondaryGradient);
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: white;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 10px;
+    background: white;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
