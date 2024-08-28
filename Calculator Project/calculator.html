@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+  <script src="calculator.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div  class="screen"></div>
+    <div class="inner_container">
+
+    <button class="calc_button" onclick=" deleteCalc()">clear</button>
+    <button class="calc_button" onclick=" updateCalc(' / ') ">/</button>
+    <button class="calc_button" onclick=" updateCalc(' * ')">*</button>
+    <button class="calc_button" onclick=" updateCalc('7')">7</button>
+    <button class="calc_button" onclick=" updateCalc('8')">8</button>
+    <button class="calc_button" onclick=" updateCalc('9')">9</button>
+    <button class="calc_button" onclick=" updateCalc(' - ')">-</button>
+    <button class="calc_button" onclick=" updateCalc('4')">4</button>
+    <button class="calc_button" onclick=" updateCalc('5')">5</button>
+    <button class="calc_button" onclick=" updateCalc('6')">6</button>
+    <button class="calc_button" onclick=" updateCalc(' + ')">+</button>
+    <button class="calc_button" onclick=" updateCalc('1')">1</button>
+    <button class="calc_button" onclick=" updateCalc('2')">2</button>
+    <button class="calc_button" onclick=" updateCalc('3')">3</button>
+    <button class="calc_button" onclick=" updateCalc('0')">0</button>
+    <button class="calc_button" onclick=" updateCalc('00')">00</button>
+    <button class="calc_button" onclick=" updateCalc('.')">.</button>
+    <button class="calc_button" onclick=" doCalc()
+    ">=</button>
+    </div>
+  </div>
+</body>
+</html>
