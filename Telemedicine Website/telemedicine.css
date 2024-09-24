@@ -81,6 +81,7 @@ nav ul{
 nav li{
     padding: 0.5rem;
     border-top: 1px solid #188067 ;
+    cursor: pointer;
 }
 /*making the list grow on hover*/
 :is(nav ul) :hover,:focus{
@@ -305,6 +306,9 @@ aside h3{
   text-decoration: underline;
 }
 footer{
+  background-color: #188067;
+}
+.footer{
   margin-top: 20px;
   bottom: 0;
   background-color: #188067;
@@ -325,6 +329,10 @@ footer{
 }
 .footerDiv:nth-child(3) p{
   font-size: min(2.25rem,3vh)
+}
+.courtesy{
+  font-size: 1.1rem;
+  text-align: center;
 }
 @media screen and (min-width:576px){
   .heroSection{
@@ -536,7 +544,7 @@ nav a{
   .footerDiv{
     width: clamp(200px,220px,250px);
   }
-  footer{
+  .footer{
     justify-content: space-around;
 
   }
