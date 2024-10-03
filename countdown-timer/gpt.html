@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown_Timer</title>
+  <style>
+ *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ }
+ body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aqua;
+ }
+ section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: azure;
+  border-radius: 15px;
+  box-shadow:0px 2px 30px rgba(17, 17, 17, 0.897);
+ }
+ .buttonDiv{
+  display: flex;
+  gap: 10px;
+ }
+ #actionButton,#stop,#pause{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  transition: transform 0.5s ease;
+ }
+ #actionButton:hover,#stop:hover,#pause:hover{
+  transform: scale(110%);
+ }
+ #actionButton{
+  background-color: green;
+}
+#stop{
+  background-color: red;
+}
+#pause{
+  background-color: blue;
+}
+
+ .counter{
+  color:blue;
+  font-size: 1.5rem;
+ }
+ .input{
+  padding: 20px;
+   border-radius: 5px;
+   border: 1px solid;
+   text-align: center;
+ }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Countdown Timer</h1>
+  <input type="text" id="input" class="input" placeholder="Set Timer" >
+  <div class="buttonDiv">
+  <button id="actionButton">Start</button>
+  <button id="stop">Stop</button>
+</div>
+<button id="pause">Pause</button>
+  <p id="screen" class="counter">0</p>
+</section>
+</body>
+<script>
+  
+  let btn = document.getElementById("actionButton");
+  let screen = document.getElementById("screen");
+  let stopBtn = document.getElementById("stop");
+  let pauseBtn = document.getElementById("pause");
+  let intervalId;
+  let intervalDuration;
+  let isPaused = false; // Initially, it is not paused
+  let remainingTime;
+
+  // Start/Continue countdown
+  btn.addEventListener('click', () => {
+    if (isPaused) {
+      // If it's paused, resume the countdown
+      resumeCountdown();
+    } else {
+      // Otherwise, start fresh
+      startCountdown();
+    }
+  });
+
+  // Function to start the countdown
+  function startCountdown() {
+    let input = document.getElementById('input').value;
+    remainingTime = parseInt(input);
+    
+    if (isNaN(remainingTime) || remainingTime <= 0) {
+      alert('Please enter a valid number greater than 0.');
+      return;
+    }
+
+    screen.textContent = `Time Left: ${remainingTime}`;
+    btn.textContent = "Start";
+    intervalDuration = remainingTime;
+
+    intervalId = setInterval(() => {
+      intervalDuration--;
+      screen.textContent = `Time Left: ${intervalDuration}`;
+
+      if (intervalDuration <= 0) {
+        clearInterval(intervalId);
+        screen.innerHTML = "Countdown finished!";
+      }
+    }, 1000);
+
+    // Disable input after countdown starts
+    document.getElementById('input').disabled = true;
+    pauseBtn.disabled = false;
+    stopBtn.disabled = false;
+  }
+
+  // Pause countdown
+  pauseBtn.addEventListener('click', () => {
+    clearInterval(intervalId);
+    isPaused = true;
+    btn.textContent = "Resume";
+  });
+
+  // Resume countdown
+  function resumeCountdown() {
+    intervalId = setInterval(() => {
+      intervalDuration--;
+      screen.textContent = `Time Left: ${intervalDuration}`;
+
+      if (intervalDuration <= 0) {
+        clearInterval(intervalId);
+        screen.innerHTML = "Countdown finished!";
+        reset();
+      }
+    }, 1000);
+    
+    isPaused = false;
+    btn.textContent = "Start";
+  }
+
+  // Stop countdown
+  stopBtn.addEventListener('click', () => {
+    clearInterval(intervalId);
+    screen.innerHTML = "Countdown stopped!";
+    reset();
+  });
+
+  // Reset function after countdown finishes or stops
+  function reset() {
+    btn.textContent = "Start";
+    document.getElementById('input').disabled = false;
+    pauseBtn.disabled = true;
+    stopBtn.disabled = true;
+    isPaused = false;
+  }
+
+</script>
+</html>
