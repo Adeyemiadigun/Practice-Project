@@ -5,33 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <link rel="stylesheet" href="calculator.css">
-  <script src="calculator.js"></script>
 </head>
 <body>
   <div class="container">
     <div  class="screen"></div>
     <div class="inner_container">
 
-    <button class="calc_button" onclick=" deleteCalc()">clear</button>
-    <button class="calc_button" onclick=" updateCalc(' / ') ">/</button>
-    <button class="calc_button" onclick=" updateCalc(' * ')">*</button>
-    <button class="calc_button" onclick=" updateCalc('7')">7</button>
-    <button class="calc_button" onclick=" updateCalc('8')">8</button>
-    <button class="calc_button" onclick=" updateCalc('9')">9</button>
-    <button class="calc_button" onclick=" updateCalc(' - ')">-</button>
-    <button class="calc_button" onclick=" updateCalc('4')">4</button>
-    <button class="calc_button" onclick=" updateCalc('5')">5</button>
-    <button class="calc_button" onclick=" updateCalc('6')">6</button>
-    <button class="calc_button" onclick=" updateCalc(' + ')">+</button>
-    <button class="calc_button" onclick=" updateCalc('1')">1</button>
-    <button class="calc_button" onclick=" updateCalc('2')">2</button>
-    <button class="calc_button" onclick=" updateCalc('3')">3</button>
-    <button class="calc_button" onclick=" updateCalc('0')">0</button>
-    <button class="calc_button" onclick=" updateCalc('00')">00</button>
-    <button class="calc_button" onclick=" updateCalc('.')">.</button>
-    <button class="calc_button" onclick=" doCalc()
-    ">=</button>
+    <button id="calcClearBtn"class="calc_button">clear</button>
+    <button id="divideBtn" class="calc_button">/</button>
+    <button id="mulBtn" class="calc_button" >*</button>
+    <button id="btnSeven" class="calc_button">7</button>
+    <button id="btnEight" class="calc_button">8</button>
+    <button id="btnNine" class="calc_button">9</button>
+    <button id="subtrBtn"class="calc_button">-</button>
+    <button id="btnFour" class="calc_button">4</button>
+    <button id="btnFive" class="calc_button" >5</button>
+    <button id="btnSix" class="calc_button">6</button>
+    <button id="addBtn" class="calc_button">+</button>
+    <button id="btnOne"class="calc_button" >1</button>
+    <button id="btnTwo" class="calc_button">2</button>
+    <button id="btnThree" class="calc_button">3</button>
+    <button id="btnZero" class="calc_button" >0</button>
+    <button id="doubleZero" class="calc_button" >00</button>
+    <button id="dotBtn" class="calc_button">.</button>
+    <button id="solveBtn" class="calc_button">=</button>
     </div>
   </div>
+  <script src="calculator.js"></script>
 </body>
 </html>
