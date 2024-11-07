@@ -1,0 +1,49 @@
+.innerList{
+  display: flex;
+  margin-top: 10px;
+}
+.innerList p{
+  flex-grow: 1;
+  width: clamp(200px,200px,500px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+.deleteButton,.addButton{
+  padding: 8px 25px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.innerContent{
+  display: flex;
+ 
+ gap:40px;
+}
+.listDate{
+  display: grid;
+  place-content:center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  width: 50px;
+}
+input{
+  border: 2px solid;
+  border-radius: 5px;
+}
+.todoInput{
+  height: 40px;
+  width: clamp(200px,200px,500px);
+}
+.addButton{
+  background-color:green;
+ width: 100px;
+  height: 50px ;
+}
+.date{
+  cursor: pointer;
+  height: 40px;
+}
+.deleteButton{
+ width: 100px;
+  height: 50px ;}
